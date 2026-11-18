@@ -9,7 +9,7 @@ import java.util.Map;
 
 /** Rota de verificacao de disponibilidade da API. */
 @RestController
-@RequestMapping("/health")
+@RequestMapping({"/", "/health"})
 public class HealthController {
 
     @GetMapping
