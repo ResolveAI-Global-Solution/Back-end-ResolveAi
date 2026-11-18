@@ -32,7 +32,7 @@ public class HistoricoStatusService {
     private static final Map<StatusOcorrencia, Set<StatusOcorrencia>> TRANSICOES = new EnumMap<>(StatusOcorrencia.class);
 
     static {
-        TRANSICOES.put(ABERTA, EnumSet.of(CONFIRMADA, EM_ANALISE, REJEITADA, RESOLVIDA));
+        TRANSICOES.put(ABERTA, EnumSet.of(CONFIRMADA, EM_ANALISE, ENCAMINHADA, REJEITADA, RESOLVIDA));
         TRANSICOES.put(CONFIRMADA, EnumSet.of(EM_ANALISE, ENCAMINHADA, RESOLVIDA, REJEITADA));
         TRANSICOES.put(EM_ANALISE, EnumSet.of(ENCAMINHADA, REJEITADA, RESOLVIDA));
         TRANSICOES.put(ENCAMINHADA, EnumSet.of(RESOLVIDA));
