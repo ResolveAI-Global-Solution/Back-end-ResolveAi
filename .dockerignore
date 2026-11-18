@@ -1,0 +1,14 @@
+target/
+.env
+.env.example
+docker-compose.yml
+.idea/
+.git/
+INSTRUCOES_API_JAVA.md
+CLAUDE.md
+AGENTS.md
+.claude/
+.codex/
+*.iml
+*.md
+docs/

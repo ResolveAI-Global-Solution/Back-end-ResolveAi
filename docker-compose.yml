@@ -1,0 +1,14 @@
+# Sobe a API localmente: docker compose up --build
+# As variaveis vem do arquivo .env desta pasta (copie o .env.example e preencha).
+services:
+  api:
+    build: .
+    image: resolveai-api
+    container_name: resolveai-api
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: ${DB_URL}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173}
