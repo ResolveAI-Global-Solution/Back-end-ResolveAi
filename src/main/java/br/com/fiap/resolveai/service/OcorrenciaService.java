@@ -79,7 +79,7 @@ public class OcorrenciaService {
         // UC01: a ocorrencia e o primeiro registro do historico sao gravados juntos (mesma transacao)
         long id = transacao.executar(conn -> {
             long novoId = ocorrenciaDAO.inserir(conn, ocorrencia);
-            historicoDAO.inserir(conn, novoId, StatusOcorrencia.ABERTA, "Ocorrência registrada com foto no local.");
+            historicoDAO.inserir(conn, novoId, StatusOcorrencia.ABERTA, "Ocorrência registrada.");
             return novoId;
         });
         return buscarPorId(id);
